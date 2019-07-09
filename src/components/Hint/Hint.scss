@@ -1,0 +1,28 @@
+@import '~css/shared/variables';
+
+.Hint {
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+
+  &--info {
+    font-size: 0.7rem;
+    font-weight: $font-weight--bold;
+    color: $text-color--subtle;
+  }
+
+  &--success {
+    font-size: 0.7rem;
+    font-weight: $font-weight--bold;
+    color: $text-color--success;
+  }
+
+  &--error {
+    font-size: 0.7rem;
+    font-weight: $font-weight--bold;
+    color: $text-color--error;
+  }
+
+  &--special {
+    color: $text-color--special;
+  }
+}

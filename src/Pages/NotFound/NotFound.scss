@@ -1,0 +1,52 @@
+@import '~css/shared/variables';
+
+.NotFound {
+  &__container {
+    width: 100%;
+    text-align: center;
+    background: url(../../assets/errorpage-bg.jpg) 50% 100% no-repeat;
+    background-size: cover;
+
+    @media (min-width: 48rem) {
+      background: url(../../assets/errorpage-bg2x.jpg) 50% 100% no-repeat;
+      background-size: cover;
+      background-position: top;
+      padding-bottom: 100px;
+    }
+
+    &:before {
+      content: '';
+      margin: 0 auto;
+      width: 139px;
+      height: 175px;
+      max-width: 100%;
+      margin-top: 11rem;
+      background: url(../../assets/monster.png) 50% 50% no-repeat;
+      background-size: contain;
+      display: block;
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        background: url(../../assets/monster2x.png) 50% 50% no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__mainHeader {
+    width: 25rem;
+    max-width: 90%;
+    font-size: 3rem;
+    font-weight: $font-weight--bold;
+    line-height: 1;
+    color: $color-white;
+    margin: 0 auto;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    font-weight: $font-weight--bold;
+    line-height: 1;
+    margin-top: 1.25rem;
+    color: $color-blue--dark-faint;
+  }
+}

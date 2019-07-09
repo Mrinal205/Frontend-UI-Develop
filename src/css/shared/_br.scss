@@ -1,0 +1,9 @@
+@import 'variables';
+
+br {
+  height: 0;
+}
+br,
+.br {
+  border-bottom: 1px solid $separator-color;
+}

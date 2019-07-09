@@ -1,0 +1,30 @@
+@import '~css/shared/variables';
+
+.ChartSwitch {
+  z-index: 100;
+  position: absolute;
+  right: 24px;
+  display: flex;
+  font-family: $font-family--regular;
+  font-weight: $font-weight--bold;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  &--button {
+    margin: 0 0 0 0.687rem;
+    height: 1.5rem;
+    width: 4.718rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $button-choice-border-color;
+    background-color: $button-choice-background-color;
+    border: 1px solid $button-choice-border-color;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    &--active {
+      cursor: default;
+      color: $color-blue;
+      border: 1px solid $color-blue;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '~css/shared/variables';
+
+.MarketFormPlaceholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-blue--50;
+  font-family: $font-family--regular;
+  font-size: 0.875rem;
+  font-weight: $font-weight--bold;
+  height: 100%;
+  width: 100%;
+}

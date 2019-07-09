@@ -1,0 +1,41 @@
+@import '~css/shared/variables';
+
+.HelpTooltip {
+  position: relative;
+  margin-left: 5px;
+  top: -2px;
+
+  &__icon {
+    vertical-align: middle;
+    cursor: help;
+  }
+
+  &__bubble {
+    position: absolute;
+    bottom: 170%;
+    background: $color-blue--slate;
+    font-size: 0.625rem;
+    padding: 1rem;
+    width: 11rem;
+    left: -5rem;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.7;
+    text-transform: none;
+
+    strong {
+      color: $color-blue--dark-faint;
+    }
+
+    &:after {
+      content: '';
+      border-top: 0.7rem solid $color-blue--slate;
+      border-left: 0.7rem solid transparent;
+      border-right: 0.7rem solid transparent;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -0.7rem;
+    }
+  }
+}

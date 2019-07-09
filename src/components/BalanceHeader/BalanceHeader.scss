@@ -1,0 +1,55 @@
+@import '~css/shared/variables';
+
+.Balance {
+  &__Header {
+    width: 100%;
+
+    .Col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    &.compact {
+      .Col:first-of-type {
+        margin-right: 40px;
+      }
+    }
+  }
+  &__Title {
+    font-weight: $font-weight--bold;
+
+    &--label {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+    &--primary {
+      font-size: 1.875rem;
+      line-height: 1;
+    }
+    &--secondary {
+      margin-left: 0.6rem;
+      font-size: 0.875rem;
+      color: $color-blue--dark-faint;
+    }
+
+    &-available,
+    &-reserved {
+      font-weight: $font-weight--bold;
+      &--label {
+        font-size: 1rem;
+        color: $color-green;
+        margin-bottom: 0.2rem;
+      }
+      &--primary {
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+    }
+
+    &-reserved {
+      &--label {
+        color: $color-red--pale;
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import '~css/shared/variables';
+
+.PublicArea {
+  background: $background-color--canvas-public;
+  color: $text-color--main;
+
+  &__inner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  &__logo {
+    text-align: center;
+    margin: 0em 0 2rem 0;
+
+    img {
+      height: 2.25rem;
+    }
+  }
+
+  &__col {
+    width: 30rem;
+    margin: 0 auto;
+  }
+
+  &__box {
+    background: $background--box;
+    margin: 0 0 1rem 0;
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: 0.5rem;
+    position: relative;
+
+    &--is-verify {
+      padding: 2rem;
+    }
+  }
+
+  &__headline {
+    font-size: 2.25rem;
+    font-weight: $font-weight--normal;
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+  }
+
+  &__form {
+    max-width: 300px;
+    margin: 0rem auto 0 auto;
+
+    &--separated {
+      margin-top: 1rem;
+    }
+  }
+
+  &__form-hint {
+    text-align: center;
+    margin: 0 0 2rem 0;
+  }
+
+  &__error {
+    padding: 0 0 1rem 0;
+    text-align: center;
+    color: $color-red;
+  }
+
+  &__hint {
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  &__message {
+    text-align: center;
+    padding: 0rem 0;
+  }
+
+  &__loading {
+    text-align: center;
+    background: $background--box;
+    position: absolute;
+    top: 6rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+
+    &--alt {
+      background: none;
+      margin: 3rem 0 0 0;
+      padding: 2rem 0;
+    }
+  }
+
+  .variable {
+    &--success {
+      color: $color-green;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 30px;
+    height: 29px;
+    display: block;
+    background-color: $link-primary;
+    -webkit-mask-image: url('./close-button-large.svg');
+    mask-image: url('./close-button-large.svg');
+    background-size: 80%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition: background-color 0.3s ease-in;
+
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $link-primary--hover;
+    }
+  }
+}
+
+.with-cc {
+  .PublicArea__close {
+    top: 4.5rem;
+  }
+}

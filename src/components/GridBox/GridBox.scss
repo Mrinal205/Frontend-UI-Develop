@@ -1,0 +1,106 @@
+@import '../../css/shared/variables';
+
+.GridBox {
+  border-radius: 0.25rem;
+  height: 100%;
+  background: $color-blue--ultra-dark;
+  color: $color-white;
+  position: relative;
+  padding: 1rem 1.25rem;
+  @media screen and (min-width: $breakpoint-xxl) {
+    padding: 1rem 1.5rem;
+  }
+
+  &--loading {
+    min-height: 20rem;
+  }
+
+  &--transparent {
+    background: none;
+    padding: 0;
+    min-height: 0;
+  }
+
+  &__headline {
+    position: relative;
+    margin: 0 0 0.5rem 0;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  &__aside {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__loading {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1rem 1rem;
+    color: $color-blue--dark-faint;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+
+    p {
+      font-weight: $font-weight--bold;
+      max-width: 10rem;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &--horizontal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -2rem;
+
+      p {
+        margin: 0 0 0 1rem;
+        text-align: left;
+      }
+    }
+  }
+
+  &.GridBox--Holdings {
+    .GridBox__headline {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .GridBox__aside {
+      position: relative;
+      margin-left: 1rem;
+      padding-top: 0.5rem;
+
+      input[type='checkbox'] {
+        &:checked ~ .form__checkbox-label:before {
+          background-image: url("data:image/svg+xml,<%3Fxml version='1.0' encoding='UTF-8'%3F><svg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><!-- Generator: Sketch 48.2 %2847327%29 - http://www.bohemiancoding.com/sketch --><title>Group 4</title><desc>Created with Sketch.</desc><defs><rect id='path-1' x='0' y='0' width='24' height='24' rx='2'></rect></defs><g id='Moon-Assist-GUI' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate%28-380.000000, -853.000000%29'><g id='Group-6' transform='translate%28287.000000, 853.000000%29'><g id='Group-4' transform='translate%2893.000000, 0.000000%29'><g id='checkbox'><use fill='transparent' fill-rule='evenodd' xlink:href='%23path-1'></use><rect stroke='transparent' stroke-width='1' x='0.5' y='0.5' width='23' height='23' rx='2'></rect></g><path d='M10.0947571,4.76142375 L16.0947571,4.76142375 C16.8311367,4.76142375 17.4280904,4.16447008 17.4280904,3.42809042 C17.4280904,2.69171075 16.8311367,2.09475708 16.0947571,2.09475708 L8.76142375,2.09475708 C8.39323392,2.09475708 8.05990058,2.2439955 7.81861471,2.48528137 C7.57732883,2.72656725 7.42809042,3.05990058 7.42809042,3.42809042 L7.42809042,17.4280904 C7.42809042,18.1644701 8.02504408,18.7614237 8.76142375,18.7614237 C9.49780342,18.7614237 10.0947571,18.1644701 10.0947571,17.4280904 L10.0947571,4.76142375 Z' id='Combined-Shape' fill='%233D6496' transform='translate%2812.428090, 10.428090%29 rotate%28225.000000%29 translate%28-12.428090, -10.428090%29 '></path></g></g></g></svg>");
+        }
+      }
+
+      .form__checkbox-label {
+        color: #3d6496;
+        font-size: 11px;
+        line-height: 1.5;
+
+        &:before {
+          border-radius: 0.125rem;
+          background-size: contain;
+          border: 1px solid #3d6496;
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../../node_modules/react-vis/dist/style.css';
+@import '../../css/shared/variables';
+
+.CoinLineChart {
+  .rv-xy-plot__inner {
+    overflow: visible;
+  }
+
+  .rv-hint {
+    background: $color-light-green;
+    border-radius: 2px;
+    padding: 1px 5px;
+    margin: 0.5rem;
+
+    &-content {
+      font-weight: $font-weight--bold;
+      font-size: 0.625rem;
+      color: $color-darkest-gray;
+    }
+  }
+}

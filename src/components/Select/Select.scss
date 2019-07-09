@@ -1,0 +1,235 @@
+@import '~css/shared/variables';
+
+$select-input-bg: $color-blue--muted;
+$select-input-bg-disabled: $color-blue--muted;
+$select-input-bg-focus: $color-blue--muted;
+$select-input-border-color: transparent;
+$select-input-border-radius: 0.25rem;
+$select-input-border-focus: transparent;
+// $select-input-box-shadow-focus:     inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px -1px fade($select-input-border-focus, 50%) !default;
+$select-input-border-width: 0px;
+$select-input-height: 26px;
+//$select-input-internal-height:      ($select-input-height - ($select-input-border-width * 2)) !default;
+$select-input-placeholder: $color-white;
+$select-text-color: $color-white;
+$select-link-hover-color: $color-white;
+// $select-input-hover-box-shadow:     0 1px 0 rgba(0, 0, 0, 0.06) !default;
+
+$select-padding-vertical: 5px;
+$select-padding-horizontal: 10px;
+
+// menu options
+$select-menu-zindex: $z-index--select-menu;
+$select-menu-max-height: 320px;
+// $select-menu-box-shadow:            $select-input-hover-box-shadow !default;
+
+// $select-option-color:               lighten($select-text-color, 20%) !default;
+$select-option-bg: $color-blue--quite-dark;
+// $select-option-focused-color:       $select-text-color !default;
+$select-option-focused-bg: $color-blue--muted;
+// $select-option-selected-color:      $select-text-color !default;
+$select-option-selected-bg: $color-blue--quite-dark;
+// $select-option-disabled-color:      lighten($select-text-color, 60%) !default;
+
+// $select-noresults-color:            lighten($select-text-color, 40%) !default;
+
+// clear "x" button
+// $select-clear-size:                 floor(($select-input-height / 2)) !default;
+$select-clear-color: $color-blue--dark;
+$select-clear-hover-color: $color-white;
+// $select-clear-width:                ($select-input-internal-height / 2) !default;
+
+// arrow indicator
+$select-arrow-color: $color-blue--dark;
+$select-arrow-color-hover: $color-white;
+$select-arrow-width: 4px;
+
+// loading indicator
+// $select-loading-size:               16px !default;
+// $select-loading-color:              $select-text-color !default;
+// $select-loading-color-bg:           $select-input-border-color !default;
+
+// multi-select item
+// $select-item-border-radius:         2px !default;
+// $select-item-gutter:                5px !default;
+// $select-item-padding-vertical:      2px !default;
+// $select-item-padding-horizontal:    5px !default;
+// $select-item-font-size:             .9em !default;
+// $select-item-color:                 #08c !default; // pale blue
+// $select-item-bg:                    #f2f9fc !default;
+// $select-item-border-color:          darken($select-item-bg, 10%) !default;
+// $select-item-hover-color:           darken($select-item-color, 5%) !default; // pale blue
+// $select-item-hover-bg:              darken($select-item-bg, 5%) !default;
+// $select-item-disabled-color:        #333 !default;
+// $select-item-disabled-bg:           #fcfcfc !default;
+// $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%) !default;
+
+@import '~react-select/scss/default';
+
+.Select--moon {
+  font-size: 0.75rem;
+  font-weight: $font-weight--bold;
+  min-width: 7rem;
+
+  &-coins {
+    .Select-value-label {
+      &-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      &-coin {
+        width: 20%;
+      }
+      &-currency {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0 0.5rem;
+        flex-grow: 1;
+      }
+    }
+    .Select-option {
+      &-container {
+        font-size: 0.6875rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      &-coin {
+        width: 20%;
+        display: inline-block;
+      }
+      &-currency {
+        width: 33%;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0 0.5rem;
+        flex-grow: 1;
+      }
+      &-price {
+        text-align: right;
+        width: 33%;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .Select-control {
+    cursor: pointer;
+  }
+
+  .Select-arrow-zone {
+    position: relative;
+    padding-right: 12px;
+  }
+
+  .Select-arrow {
+    background: url('../../assets/icons/dropdown-arrow.svg');
+    border: none;
+    width: 10px;
+    height: 6px;
+  }
+
+  &.has-value,
+  &.is-focused,
+  &.is-pseudo-focused {
+    &.Select--single {
+      > .Select-control {
+        .Select-value {
+          .Select-value-label {
+            color: $color-blue--dark-faint !important;
+            font-weight: $font-weight--bold;
+          }
+        }
+      }
+    }
+  }
+
+  &-large {
+    font-size: 1rem;
+
+    .Select-control {
+      padding: 0.75rem 1rem;
+      border: 1px solid $color-blue--action;
+
+      .Select-value,
+      .Select-placeholder {
+        padding: 0.75rem 1rem;
+        color: $color-blue;
+        font-weight: $font-weight--normal;
+      }
+    }
+
+    .Select-menu-outer {
+      border: 1px solid $color-blue--action;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .Select-option {
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+
+      color: $color-blue;
+      font-weight: $font-weight--normal;
+      background: $color-blue--ultra-dark;
+      border-bottom: 1px solid $color-blue--50;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.is-focused {
+        background: $background-color--canvas;
+        border-color: $background-color--canvas;
+      }
+    }
+
+    &.is-focused,
+    &.is-focused:not(.is-open) {
+      .Select-control {
+        border: 1px solid $color-blue--action;
+      }
+    }
+
+    &.has-value,
+    &.is-focused,
+    &.is-pseudo-focused {
+      &.Select--single {
+        > .Select-control {
+          .Select-value {
+            .Select-value-label {
+              color: $color-blue !important;
+            }
+          }
+        }
+      }
+    }
+
+    // force hide ugly [x] clear button
+    .Select-clear-zone {
+      display: none;
+    }
+
+    .Select-arrow {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0.5rem 0.5rem 0 0.5rem;
+      border-color: $color-blue transparent transparent transparent;
+    }
+
+    &.is-open {
+      .Select-control {
+        .Select-arrow {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0.5rem 0.5rem 0.5rem;
+          border-color: transparent transparent $color-blue transparent;
+        }
+      }
+    }
+  }
+}

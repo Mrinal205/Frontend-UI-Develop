@@ -1,0 +1,193 @@
+@import 'variables';
+
+$form__input-color: #008ed4;
+
+$form__input-background: $color-blue--muted;
+$form__input-background--focused: $color-blue--very-dark;
+
+$form__input-border-color: #4a90e2;
+$form__checkbox--checked: $color-green;
+
+$form__error-color: $color-red;
+
+.form {
+  padding: 0;
+  margin: 0;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &--padded {
+    padding: 0 2rem;
+  }
+
+  &__row {
+    margin: 0 0 0.75rem 0;
+    max-width: 720px;
+
+    &--actions {
+      margin: 1.5rem 0;
+    }
+
+    &--center {
+      text-align: center;
+    }
+
+    &--short {
+      max-width: 24rem;
+      width: 100%;
+    }
+
+    &--separated {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__flex-row {
+    display: flex;
+    max-width: 720px;
+    margin: 0 0 1.5rem 0;
+  }
+
+  &__col {
+    flex: 1 0 0;
+    padding: 0 1rem 0 0;
+
+    & + & {
+      padding: 0 0 0 1rem;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-weight: $font-weight--bold;
+  }
+
+  &__input {
+    border-radius: 0.125rem;
+    border: 1px solid $form__input-border-color;
+    display: block;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    width: 100%;
+    height: 3.2rem;
+    background: $form__input-background;
+    color: $form__input-color;
+
+    // hack for autofill color
+    &:-webkit-autofill {
+      color: $form__input-color !important;
+      box-shadow: inset 0 0 0px 100px $form__input-background;
+      -webkit-text-fill-color: $form__input-color !important;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $form__input-color;
+    }
+    &::-moz-placeholder {
+      color: $form__input-color;
+    }
+    &:-moz-placeholder {
+      color: $form__input-color;
+    }
+    &:-ms-input-placeholder {
+      color: $form__input-color;
+    }
+
+    &:focus,
+    &:-webkit-autofill:focus {
+      background: $form__input-background--focused;
+      outline: none;
+      -webkit-text-fill-color: $form__input-color !important;
+      color: $form__input-color !important;
+      caret-color: $form__input-color;
+    }
+  }
+
+  &__row--input-center {
+    .form__input {
+      text-align: center;
+    }
+  }
+
+  // checkboxes
+  &__checkbox-row {
+    display: block;
+    position: relative;
+    margin: 0.5rem 0;
+  }
+
+  &__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__checkbox-label {
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 0.125rem;
+      border: 1px solid $form__input-border-color;
+      background: $form__input-background;
+      vertical-align: middle;
+      margin: -0.25rem 0.5rem 0 0;
+    }
+  }
+
+  // checked style
+  &__checkbox:checked ~ &__checkbox-label {
+    &::before {
+      border-radius: 0;
+      border: none;
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 48.2 %2847327%29 - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EGroup 4%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3Crect id='path-1' x='0' y='0' width='24' height='24' rx='2'%3E%3C/rect%3E%3C/defs%3E%3Cg id='Moon-Assist-GUI' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate%28-380.000000, -853.000000%29'%3E%3Cg id='Group-6' transform='translate%28287.000000, 853.000000%29'%3E%3Cg id='Group-4' transform='translate%2893.000000, 0.000000%29'%3E%3Cg id='checkbox'%3E%3Cuse fill='%2308B689' fill-rule='evenodd' xlink:href='%23path-1'%3E%3C/use%3E%3Crect stroke='%2308B689' stroke-width='1' x='0.5' y='0.5' width='23' height='23' rx='2'%3E%3C/rect%3E%3C/g%3E%3Cpath d='M10.0947571,4.76142375 L16.0947571,4.76142375 C16.8311367,4.76142375 17.4280904,4.16447008 17.4280904,3.42809042 C17.4280904,2.69171075 16.8311367,2.09475708 16.0947571,2.09475708 L8.76142375,2.09475708 C8.39323392,2.09475708 8.05990058,2.2439955 7.81861471,2.48528137 C7.57732883,2.72656725 7.42809042,3.05990058 7.42809042,3.42809042 L7.42809042,17.4280904 C7.42809042,18.1644701 8.02504408,18.7614237 8.76142375,18.7614237 C9.49780342,18.7614237 10.0947571,18.1644701 10.0947571,17.4280904 L10.0947571,4.76142375 Z' id='Combined-Shape' fill='%23132A4A' transform='translate%2812.428090, 10.428090%29 rotate%28225.000000%29 translate%28-12.428090, -10.428090%29 '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // errors
+  &__error {
+    color: $form__error-color;
+    font-size: 0.9rem;
+  }
+
+  &__field-error {
+    color: $form__error-color;
+    font-size: 0.75rem;
+    padding: 0.25rem 0rem 0rem 1px;
+    margin: 0 0 -0.5rem 0;
+  }
+
+  &__checkbox-row {
+    .form__field-error {
+      margin: -0.5rem 0 0 0rem;
+    }
+  }
+
+  // hints
+  &__hint {
+    font-size: 0.7rem;
+    font-weight: $font-weight--bold;
+
+    &--info {
+      color: $text-color--subtle;
+    }
+
+    &--success {
+      color: $text-color--success;
+    }
+
+    &--error {
+      color: $text-color--error;
+    }
+  }
+}

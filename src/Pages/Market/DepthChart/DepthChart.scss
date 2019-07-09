@@ -1,0 +1,133 @@
+@import '~css/shared/variables';
+
+.DepthLineChart {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-basis: 100%;
+  &-Loading {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-Title {
+    font-family: $font-family--regular;
+    font-weight: $font-weight--bold;
+    color: $color-white;
+    font-size: 1.125rem;
+    position: absolute;
+    top: 0px;
+    left: -2px;
+  }
+
+  &-Zoom {
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    flex-grow: 1;
+    .depth-side-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px;
+      font-size: 0.87rem;
+      font-weight: $font-weight--bold;
+      border-radius: 4px;
+      background-color: $button-choice-background-color;
+      &-enabled {
+        border: solid 1px $button-choice-border-color;
+        color: $button-choice-label-color;
+        cursor: pointer;
+      }
+      &-disabled {
+        border: solid 1px $button-choice-border-color;
+        color: $button-choice-label-color;
+        cursor: not-allowed;
+      }
+    }
+    .depth-center-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &-price {
+        width: 153px;
+        height: 20px;
+        font-size: 1rem;
+        font-family: $font-family--regular;
+        font-weight: $font-weight--bold;
+        color: $color-white;
+        text-align: center;
+      }
+      &-description {
+        width: 153px;
+        height: 13px;
+        font-size: 0.6875rem;
+        font-family: $font-family--regular;
+        font-weight: $font-weight--bold;
+        text-align: center;
+        color: $color-blue--dark-faint;
+      }
+    }
+  }
+  .rv-xy-plot {
+    margin-top: 25px;
+    position: relative;
+    .rv-xy-plot__inner {
+      overflow: hidden;
+      .rv-xy-plot__axis__line {
+        stroke: $color-blue--dark-faint;
+        stroke-width: 1px;
+      }
+      .rv-xy-plot__axis__tick__text {
+        font-weight: $font-weight--normal;
+        font-family: $font-family--regular;
+        color: $color-blue--dark-faint;
+        fill: $color-blue--dark-faint;
+        font-size: 0.6875rem;
+      }
+      .rv-xy-plot__grid-lines__line {
+        stroke-width: 1px;
+        stroke: $color-dark-gray;
+      }
+      .rv-xy-plot__axis__tick__line {
+        stroke-width: 1px;
+        stroke: $color-blue--dark-faint;
+      }
+      .rv-xy-plot__series,
+      .rv-xy-plot__series--line {
+        stroke-width: 1px;
+      }
+    }
+    .rv-hint {
+      background: $color-light-green;
+      border-radius: 2px;
+      padding: 1px 5px;
+      margin: 0.5rem;
+
+      &-content {
+        font-weight: $font-weight--bold;
+        font-size: 0.625rem;
+        color: $color-darkest-gray;
+      }
+    }
+  }
+}

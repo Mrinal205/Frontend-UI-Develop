@@ -1,0 +1,87 @@
+@import '~css/shared/variables';
+
+$ml-input-text-color: $color-blue--quite-dark;
+$ml-input-text-color--focus: $color-blue--dark-faint;
+
+.MarketsList {
+  &__input {
+    margin: 0.5rem 0;
+    width: 100%;
+    background: $color-blue--very-dark url('search.png') 98% 50% no-repeat;
+    background-size: 20px 20px;
+    border: solid 1px $color-blue--slate;
+    border-radius: 0.125rem;
+    padding: 0.2rem 0.5rem;
+    color: $ml-input-text-color;
+    font-size: 0.75rem;
+    font-weight: $font-weight--bold;
+
+    &::-webkit-input-placeholder {
+      color: $ml-input-text-color;
+    }
+    &::-moz-placeholder {
+      color: $ml-input-text-color;
+    }
+    &:-moz-placeholder {
+      color: $ml-input-text-color;
+    }
+    &:-ms-input-placeholder {
+      color: $ml-input-text-color;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-blue--dark;
+      color: $ml-input-text-color--focus;
+    }
+  }
+
+  &__filter {
+    padding: 0 0 1rem 0;
+  }
+
+  // had to apply ugly cell heading shift,
+  // because scrollbar in table is pushing body columns colimns a bit
+  &__list--scrollable {
+    margin-right: -0.75rem;
+
+    .ReactTable {
+      .rt-thead {
+        .rt-th {
+          position: relative;
+          &:nth-child(2) {
+            left: -3px;
+          }
+          &:nth-child(3) {
+            left: -7px;
+          }
+          &:nth-child(4) {
+            left: -9px;
+          }
+        }
+      }
+      .rt-overflow.rt-tbody {
+        overflow: hidden;
+
+        .rt-tr-group {
+          padding-right: 0.75rem;
+        }
+      }
+
+      .rt-overflow.rt-tbody:hover {
+        overflow-y: overlay;
+      }
+
+      .rt-overflow .rt-tr-group .rt-td {
+        overflow-x: hidden;
+      }
+    }
+  }
+
+  .rt-noData {
+    position: absolute;
+    top: 2.5rem;
+    left: 1.25rem;
+    text-align: center;
+  }
+}

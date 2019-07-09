@@ -1,0 +1,108 @@
+@import '~css/shared/variables';
+
+.TopCoinsCharts {
+  flex-grow: 1;
+  background: $color-blue--ultra-dark;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+
+  &__Header {
+    font-weight: $font-weight--bold;
+    flex-grow: 0;
+    &-title {
+      font-size: 1.125rem;
+    }
+    &-selectors {
+      float: right;
+      width: 7rem;
+    }
+  }
+  &__Container {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    &-cell {
+      width: 50%;
+      flex-basis: 50%;
+      display: flex;
+
+      &.order-0 {
+        border-bottom: 1px solid $color-dark-gray;
+        border-right: 1px solid $color-dark-gray;
+        padding: 0 1.5rem 1rem 0;
+      }
+      &.order-1 {
+        border-bottom: 1px solid $color-dark-gray;
+        padding: 0 0 1rem 1.5rem;
+      }
+      &.order-2 {
+        border-right: 1px solid $color-dark-gray;
+        padding: 1rem 1.5rem 0 0;
+      }
+      &.order-3 {
+        padding: 1rem 0 0 1.5rem;
+      }
+
+      &-name {
+        display: flex;
+        font-size: 0.875rem;
+        font-weight: $font-weight--bold;
+        color: white !important;
+        text-decoration: none !important;
+
+        &-symbol {
+          margin-left: 5px;
+          color: $color-blue--dark-faint;
+        }
+
+        &:hover {
+          .TopCoinsCharts__Container-cell-name-symbol {
+            color: $color-blue--highlight;
+          }
+        }
+      }
+
+      &-container {
+        flex-grow: 1;
+        position: relative;
+      }
+
+      &-content {
+        position: relative;
+      }
+
+      &-price {
+        font-weight: $font-weight--bold;
+        font-size: 1.125rem;
+      }
+      &-change {
+        font-weight: $font-weight--bold;
+        font-size: 0.75rem;
+        display: inline-block;
+        margin-left: 0.6rem;
+      }
+      &-left-offset {
+        margin-left: 8px;
+      }
+      &-align {
+        display: flex;
+      }
+
+      & .CoinLineChart {
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .GridBox.GridBox--transparent.GridBox--loading {
+    margin-top: -3rem;
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-wallet</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="App-/-Market-Detail-Large-Chart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-482.000000, -28.000000)">
+        <g id="Group-13" transform="translate(479.000000, 26.000000)" stroke="#FFFFFF">
+            <g id="Icon/wallet">
+                <rect id="Rectangle-14-Copy-3" x="3.5" y="6.5" width="17" height="13" rx="2"></rect>
+                <path d="M4.80000019,6.5 L18.0653597,3.29801668 C18.6022258,3.16842829 19.142494,3.49859218 19.2720824,4.03545836 C19.2906289,4.11229366 19.3000002,4.1910569 19.3000002,4.27009889 L19.3000002,6.28185743" id="Path-8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M20.5,15.5 L20.5,10.5 L18,10.5 C17.1715729,10.5 16.5,11.1715729 16.5,12 L16.5,14 C16.5,14.8284271 17.1715729,15.5 18,15.5 L20.5,15.5 Z" id="Rectangle-18"></path>
+            </g>
+        </g>
+    </g>
+</svg>

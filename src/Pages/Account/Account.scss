@@ -1,0 +1,186 @@
+@import '~css/shared/variables';
+
+.Account {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: -4rem;
+
+  &__sidebar {
+    width: 360px;
+    background: $color-blue--muted;
+    padding: 3rem;
+  }
+
+  &__nav {
+    display: block;
+    padding: 0;
+    margin: 0 0 5rem 0;
+  }
+
+  &__nav-link {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    margin: 0 0 0.25rem 0;
+
+    &:link,
+    &:visited {
+      color: $link-secondary;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      color: $link-secondary--hover;
+
+      .Account__nav-link-icon {
+        background-color: $link-secondary--hover;
+      }
+    }
+
+    &--is-active {
+      &:link,
+      &:visited {
+        color: $link-secondary--hover;
+      }
+
+      .Account__nav-link-icon {
+        background-color: $link-secondary--hover;
+      }
+    }
+  }
+
+  &__nav-link-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    top: -0.1rem;
+    background-color: $color-white;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+
+    &--summary {
+      mask-image: url('../../assets/icons/account/summary.svg');
+    }
+
+    &--personalData {
+      mask-image: url('../../assets/icons/account/personal-data.svg');
+    }
+
+    &--settings {
+      mask-image: url('../../assets/icons/account/settings.svg');
+    }
+
+    &--exchanges {
+      mask-image: url('../../assets/icons/account/exchanges.svg');
+    }
+
+    &--security {
+      mask-image: url('../../assets/icons/account/security.svg');
+    }
+  }
+
+  /* Content */
+
+  &__content {
+    padding: 3rem 4rem 3rem 5rem;
+    flex: 1;
+  }
+
+  &__help {
+    font-size: 0.8rem;
+    background: $color-blue--ultra-dark;
+    padding: 1rem;
+    border-radius: 0.25rem;
+
+    strong {
+      display: block;
+      margin: 0 0 0.5rem 0;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__foot {
+    .SocialMediaLinks {
+      margin: 2rem 0;
+    }
+
+    .AppFooter__Link {
+      margin: 0 0.375rem;
+    }
+  }
+
+  &__copyright {
+    font-weight: $font-weight--bold;
+  }
+}
+
+.content {
+  &__header {
+    margin: 0 0 1.5rem 0;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: $font-weight--bold;
+  }
+
+  &__section {
+    padding: 1.5rem 0;
+    max-width: 920px;
+
+    &--border {
+      border-bottom: 1px solid $separator-color;
+    }
+  }
+
+  &__loading {
+    padding: 3rem;
+  }
+
+  &__headline {
+    font-size: 1.125rem;
+    font-weight: $font-weight--bold;
+    margin: 0 0 1rem 0;
+    &--subhead {
+      margin: 30px 0 15px;
+    }
+  }
+
+  &__section-header {
+    position: relative;
+  }
+
+  &__section-link {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: $color-green;
+    border: 1px solid $color-green;
+    border-radius: 4px;
+    font-weight: $font-weight--bold;
+    padding: 0.125rem 1rem;
+    width: 6rem;
+    text-align: center;
+
+    &:link,
+    &:visited {
+      color: $color-green;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      color: $link-secondary--hover;
+    }
+  }
+}

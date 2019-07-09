@@ -1,0 +1,328 @@
+@import '~css/shared/variables';
+
+.TableList {
+  margin: 0 0 1rem 0;
+
+  .ReactTable {
+    width: 100%;
+    font-weight: $font-weight--bold;
+    border: none;
+
+    .rt-table {
+      overflow-x: hidden;
+
+      &.rt-overflow {
+        .rt-thead {
+          padding: 0 1.5rem;
+        }
+      }
+    }
+
+    .rt-overflow {
+      overflow: visible;
+      overflow-x: hidden;
+    }
+
+    .rt-thead {
+      &.-header {
+        box-shadow: none;
+      }
+
+      .rt-th {
+        border: none;
+        border-bottom: 1px solid $color-blue--slate;
+        font-size: 0.625rem;
+        color: $color-blue--dark-faint;
+        padding: 0 0 0.2rem 0;
+        text-align: left;
+        font-weight: $font-weight--bold;
+
+        &-sortable {
+          cursor: pointer;
+
+          &:hover {
+            color: $color-blue--highlight;
+            &:after {
+              border-top-color: $color-blue--highlight;
+              border-bottom-color: $color-blue--highlight;
+            }
+          }
+        }
+
+        &-selected {
+          &:after {
+            content: '';
+            border-top: 8px solid $color-blue--dark-faint;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            display: inline-block;
+            margin-left: 5px;
+          }
+
+          &-inverted:after {
+            border-bottom: 8px solid $color-blue--dark-faint;
+            border-top: 0;
+          }
+        }
+      }
+
+      .rt-right {
+        text-align: right;
+      }
+
+      .rt-hidden {
+        display: none;
+      }
+    }
+
+    .rt-tbody {
+      .rt-tr-group {
+        flex-grow: 0;
+        border: none;
+        &:first-child {
+          .rt-td {
+            border-top: none;
+          }
+        }
+      }
+
+      .rt-td {
+        font-size: 11px;
+        padding: 0.5rem 0;
+        font-weight: $font-weight--bold;
+        border: none;
+        border-top: 1px solid $color-blue--slate;
+        overflow-x: hidden;
+      }
+
+      .rt-right {
+        text-align: right;
+      }
+
+      .rt-hidden {
+        display: none;
+      }
+    }
+  }
+
+  &--noRowLines {
+    .ReactTable {
+      .rt-tbody {
+        .rt-tr-group {
+          .rt-td {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--condensed {
+    .ReactTable {
+      .rt-tbody {
+        .rt-td {
+          padding: 0.25rem 0;
+        }
+      }
+    }
+  }
+
+  &--headerSeparated {
+    .ReactTable {
+      .rt-thead {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &--clickable {
+    .rt-tbody {
+      .rt-tr-group {
+        cursor: pointer;
+
+        &:hover {
+          background: $background-color--canvas;
+        }
+      }
+      .rt-tr--selected {
+        background: $background-color--canvas;
+        margin-top: -1px;
+        padding-top: 1px;
+
+        & + .rt-tr-group:hover {
+          border-top: 0 !important;
+        }
+        .rt-td {
+          border-color: $background-color--canvas;
+        }
+      }
+    }
+
+    .rt-overflow {
+      .rt-tr-group {
+        padding: 0 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background: $background-color--canvas;
+          border-top: 1px solid $background-color--canvas;
+          border-bottom: 1px solid $background-color--canvas;
+
+          .rt-td {
+            border: none;
+          }
+          & + .rt-tr-group .rt-td {
+            border: none;
+          }
+          &:first-child {
+            border-top: none;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+      .rt-tr-group.rt-tr--selected {
+        border-top: 1px solid $background-color--canvas;
+        border-bottom: 1px solid $background-color--canvas;
+
+        & + .rt-tr-group .rt-td {
+          border-top: 1px solid $background-color--canvas;
+        }
+        .rt-td {
+          border-top: 1px solid $background-color--canvas;
+        }
+      }
+    }
+  }
+
+  &--noMargin {
+    margin: 0;
+  }
+
+  // negative margin to offet padding in the gridbox
+  &--negativeMargin {
+    margin: 0 0 0 -1.25rem;
+    @media screen and (min-width: $breakpoint-xxl) {
+      margin: 0 0 0 -1.5rem;
+    }
+
+    .rt-tr {
+      .rt-th:first-child,
+      .rt-td:first-child {
+        margin-left: 1.25rem;
+      }
+    }
+  }
+
+  // custom styles
+  .tl-value {
+    &__primary {
+      font-weight: $font-weight--bold;
+    }
+
+    &__secondary {
+      color: $color-blue--dark-faint;
+      display: block;
+    }
+  }
+
+  .tl-simple {
+    padding: 0.3rem 0;
+  }
+
+  .tl-offset--top {
+    padding: 0.5rem 0 0 0;
+  }
+
+  .tl-offset--left {
+    padding: 0 0 0 0.5rem;
+  }
+
+  .tl-center {
+    display: flex;
+  }
+
+  .tl-time,
+  .tl-rank {
+    color: $color-blue--dark-faint;
+  }
+
+  .rt-hidden {
+    display: none;
+  }
+
+  // With Bar on background
+  .rt-tr--with-bar {
+    margin-bottom: 1px;
+    .rt-td {
+      z-index: 2;
+      position: relative;
+    }
+  }
+
+  .rt-tr-bar {
+    position: absolute;
+    left: 0;
+    height: 24px;
+    z-index: 1;
+  }
+
+  // No Data row
+  .rt-noData {
+    position: static;
+    background: none;
+    color: #fff;
+    transform: none;
+    transition: none;
+    text-align: left;
+    padding: 0;
+    font-size: 0.75rem;
+    margin: -0.5rem 0 0 0;
+  }
+
+  // faded out
+  .rt-td--faded {
+    &,
+    .tl-value {
+      color: $color-blue--50;
+    }
+
+    .InlineLabel {
+      background: $color-blue--50;
+      color: $color-blue--ultra-dark;
+    }
+  }
+
+  .tl-zero {
+    color: $color-blue--50;
+  }
+}
+
+.tl-change,
+.change-price {
+  &.neutral {
+    color: $color-green;
+    &::before {
+      content: '▬';
+      font-size: 0.9rem;
+      margin: 0 0.25rem 0 0;
+    }
+  }
+
+  &.up {
+    color: $color-green;
+    &::before {
+      content: '▲';
+      margin: 0 0.25rem 0 0;
+    }
+  }
+
+  &.down {
+    color: $color-red--pale;
+    &::before {
+      content: '▼';
+      margin: 0 0.25rem 0 0;
+    }
+  }
+}

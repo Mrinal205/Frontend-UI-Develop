@@ -1,0 +1,106 @@
+@import '~css/shared/variables';
+
+.OrderBook {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .GridBox__aside {
+    top: -2px;
+  }
+
+  &__column {
+    flex: 1;
+    &--bids {
+      padding-top: 0.1rem;
+    }
+    &--asks {
+      padding-left: 0rem;
+    }
+  }
+
+  &__column--bids,
+  &__column--asks {
+    .rt-tr-bar {
+      background-color: $color-red--muted;
+      right: 0;
+      left: auto;
+      font-size: 0.6875rem;
+    }
+
+    .TableList {
+      .ReactTable {
+        .ob-th-price {
+          padding-right: 0.5rem;
+        }
+        .ob-td-price {
+          padding-right: 0rem;
+          padding-left: 0.5rem;
+          color: $color-red--pale;
+        }
+
+        .ob-td-count {
+          color: $color-blue--dark-faint;
+        }
+
+        .ob-td-total {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  &__column--bids {
+    .rt-tr-bar {
+      background-color: $color-green--muted;
+    }
+
+    .TableList {
+      .ReactTable {
+        .ob-td-price {
+          color: $color-green;
+        }
+
+        .ob-td-count {
+          color: $color-blue--dark-faint;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  &__footer-bids {
+    flex: 1;
+    text-align: left;
+  }
+
+  &__footer-asks {
+    flex: 1;
+    text-align: right;
+  }
+
+  .MarketPrice {
+    background-color: $color-blue--muted;
+    margin: 0 -0.75rem 1rem;
+    padding: 0.75rem 0.75rem 0.75rem 1rem;
+
+    font-size: 0.875rem;
+    font-weight: $font-weight--bold;
+    text-align: right;
+
+    &__trading-pair {
+      float: left;
+    }
+
+    .MarketSummary__price-change {
+      display: inline-block;
+      width: 17px;
+    }
+  }
+}

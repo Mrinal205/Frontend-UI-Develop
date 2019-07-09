@@ -1,0 +1,89 @@
+@import '~css/shared/variables';
+
+.AppFooter {
+  margin: 3rem 0 0 0;
+  padding: 0 0.5rem;
+  text-align: center;
+
+  color: $color-white;
+
+  &__SocialMedia {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    margin: 0 0 1rem 0;
+
+    justify-content: center;
+  }
+
+  &__Link {
+    margin: 0 0.75rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $color-white;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-green;
+    }
+  }
+
+  &--extended .AppFooter__Link {
+    margin: 0 0.75rem;
+  }
+
+  &__Info {
+    font-size: 0.9rem;
+    font-weight: $font-weight--bold;
+    padding: 0 0.2rem;
+  }
+
+  &__List {
+    padding: 0;
+
+    &-item {
+      display: inline;
+      margin-right: 1.25rem;
+    }
+
+    &-link.link-secondary {
+      color: $color-white;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: $font-weight--bold;
+
+      &:link,
+      &:visited {
+        color: $color-white;
+      }
+
+      &:hover,
+      &:active {
+        color: $color-green;
+      }
+    }
+  }
+
+  &__Legend {
+    margin: 0 auto;
+    width: 70%;
+    max-width: 54rem;
+    color: $color-blue--footer-legend;
+    font-size: 0.875rem;
+    line-height: 1.86;
+    font-weight: $font-weight--bold;
+    margin-bottom: 3rem;
+  }
+
+  &__Closing-text {
+    color: $color-yellow;
+    font-size: 0.6875rem;
+    line-height: 2.18;
+    margin-bottom: 3rem;
+  }
+}

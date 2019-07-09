@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-market</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="App-/-Market-Detail-Large-Chart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-305.000000, -30.000000)" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-9" transform="translate(302.000000, 26.000000)" stroke="#FFFFFF">
+            <g id="Icon/market">
+                <g id="Group" transform="translate(3.000000, 5.000000)">
+                    <polyline id="Path-2" points="0 8.85714286 6.42857143 3.54285714 11.5714286 5.31428571 18 0"></polyline>
+                    <path d="M1.5,14 L1.5,11" id="Path-6"></path>
+                    <path d="M10.5,14 L10.5,7.5" id="Path-6-Copy"></path>
+                    <path d="M4.5,14 L4.5,10" id="Path-6"></path>
+                    <path d="M13.5,14 L13.5,8.5" id="Path-6-Copy-2"></path>
+                    <path d="M7.5,14 L7.5,6.5" id="Path-6"></path>
+                    <path d="M16.5,14 L16.5,5.5" id="Path-6-Copy-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

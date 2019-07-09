@@ -1,0 +1,13 @@
+@import '~css/shared/variables';
+
+.Wallet__Holdings {
+  .rt-table.rt-overflow,
+  .rt-tbody.rt-overflow,
+  .rt-td.rt-overflow:last-child {
+    overflow: visible;
+  }
+
+  .TableList .ReactTable .rt-thead.-header {
+    padding: 0;
+  }
+}

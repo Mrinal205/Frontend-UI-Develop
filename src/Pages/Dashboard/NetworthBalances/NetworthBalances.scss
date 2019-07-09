@@ -1,0 +1,97 @@
+@import '~css/shared/variables';
+
+.NetworthBalances {
+  display: block;
+
+  &--loading {
+    height: 6rem;
+  }
+
+  .Col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
+
+  &__aside {
+    text-align: right;
+  }
+
+  &__wallet-link {
+    display: inline-block;
+    background: $color-blue--ultra-dark;
+    padding: 1.25rem;
+    border-radius: 0.125rem;
+
+    &:hover {
+      .NetworthBalances__wallet-icon {
+        background: $color-green;
+      }
+    }
+  }
+
+  &__wallet-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    position: relative;
+    top: -0.1rem;
+    background-color: $color-white;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-image: url('../../../assets/icons/wallet.svg');
+  }
+}
+
+/* Inner node (single column) */
+.NetworthBalance {
+  &__headline {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  &__change {
+    font-size: 0.875rem;
+    font-weight: $font-weight--bold;
+    margin-left: 0.5rem;
+
+    &::before {
+      content: '▲';
+      display: inline-block;
+      margin: 0 0.25rem 0 0;
+      opacity: 0;
+    }
+
+    &--up {
+      color: $color-green;
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &--down {
+      color: $color-red--pale;
+      &::before {
+        opacity: 1;
+        transform: rotate(-180deg);
+        transform-origin: center;
+      }
+    }
+  }
+
+  &__value-primary {
+    font-size: 1.25rem;
+    font-weight: $font-weight--bold;
+    line-height: 1;
+  }
+
+  &__value-secondary {
+    margin-left: 0.6rem;
+    font-size: 0.875rem;
+    font-weight: $font-weight--bold;
+    line-height: 1;
+    color: $color-blue--dark-faint;
+  }
+}

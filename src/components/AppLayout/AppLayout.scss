@@ -1,0 +1,19 @@
+@import '~css/shared/variables';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $background-color--canvas;
+
+  &__content {
+    flex: 1;
+    color: #fff;
+    display: flex;
+    padding: 0 0 4rem 0;
+  }
+
+  &__footer {
+    background: $color-blue--ultra-dark;
+  }
+}

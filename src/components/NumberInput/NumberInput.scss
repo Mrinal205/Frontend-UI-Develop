@@ -1,0 +1,114 @@
+@import '~css/shared/variables';
+
+.NumberInput {
+  background: $color-blue--ultra-dark;
+  border: 1px solid $color-blue--slate;
+  padding: 0.4rem 3rem 0.4rem 1rem;
+  width: 100%;
+  color: $color-blue--dark-faint;
+  border-radius: 0.125rem;
+  -moz-appearance: textfield;
+
+  &--with-spin {
+    &.NumberInput--with-unit {
+      padding-right: 5rem;
+    }
+
+    + .NumberInput__unit {
+      right: 2rem;
+    }
+  }
+
+  &--with-floating-label {
+    padding-left: 3.5rem;
+  }
+
+  &:focus {
+    background-color: $color-blue--100;
+    border-color: $color-blue--50;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color-blue--slate;
+  }
+  &::-moz-placeholder {
+    color: $color-blue--slate;
+  }
+  &:-moz-placeholder {
+    color: $color-blue--slate;
+  }
+  &:-ms-input-placeholder {
+    color: $color-blue--slate;
+  }
+
+  &__unit {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.4375rem;
+    font-size: 0.75rem;
+    pointer-events: none;
+    color: $color-blue--slate;
+    font-weight: $font-weight--bold;
+  }
+
+  &__spin-button {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    border-left: 1px solid $color-blue--slate;
+    width: 23px;
+    color: $color-blue--slate;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    &-up,
+    &-down {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 50%;
+      border-bottom: 1px solid $color-blue--slate;
+      background: url('../../assets/icons/dropdown-arrow.svg') 50% 50% no-repeat;
+      text-align: center;
+      cursor: pointer;
+      font-size: 18px;
+
+      &:hover {
+        background-color: $color-blue--muted;
+      }
+
+      &:active {
+        background-color: $color-blue--slate;
+      }
+    }
+
+    &-down {
+      top: 50%;
+      border-bottom: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__floatingLabel {
+    position: absolute;
+    left: 0.625rem;
+    top: 0.4375rem;
+    pointer-events: none;
+    color: $color-blue--slate;
+    font-size: 0.75rem;
+    font-weight: $font-weight--normal;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,49 @@
+@import '~css/shared/variables';
+
+.ModalWindow {
+  width: 32rem;
+  border-radius: 0.5rem;
+  padding: 4rem;
+  background: $background--box;
+  text-align: center;
+
+  &__headline {
+    font-size: 2rem;
+    color: $color-white;
+    font-weight: $font-weight--normal;
+    margin: 0 0 1rem 0;
+  }
+
+  &__content {
+    color: $color-blue;
+  }
+
+  &__close {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    width: 30px;
+    height: 29px;
+    display: block;
+    background-color: $link-primary;
+    mask-image: url('../../assets/icons/close-button-large.svg');
+    background-size: 80%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition: background-color 0.3s ease-in;
+    cursor: pointer;
+  }
+}
+
+.ModalOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index--modal-overlay;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,19 @@
+@import '~css/shared/variables';
+
+.InlineLabel {
+  font-size: 0.625rem;
+  background: $color-green;
+  padding: 1px 5px;
+  color: $color-blue--ultra-dark;
+  border-radius: 2px;
+  margin-right: 0.5rem;
+  display: inline-block;
+  font-weight: $font-weight--bold;
+  text-transform: capitalize;
+
+  &--SELL,
+  &--sell,
+  &--negative {
+    background: $color-red--pale;
+  }
+}

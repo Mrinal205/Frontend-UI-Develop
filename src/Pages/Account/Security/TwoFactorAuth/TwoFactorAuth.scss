@@ -1,0 +1,20 @@
+@import '~css/shared/variables';
+
+.TwoFactorAuth {
+  &__step {
+    margin: 0 0 1.5rem 0;
+  }
+
+  &__code {
+    border: 1px solid $separator-color;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    display: inline-block;
+  }
+
+  &__code-box {
+    padding: 1rem;
+    background: #fff;
+    display: inline-block;
+  }
+}

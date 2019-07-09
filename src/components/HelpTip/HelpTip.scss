@@ -1,0 +1,72 @@
+@import '~css/shared/variables';
+
+.HelpTip {
+  position: relative;
+
+  &__icon {
+    border: 1px solid $color-white;
+    color: $color-white;
+    background: $color-green;
+    border-radius: 10rem;
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    text-align: center;
+    margin: 0 0 0 0.5rem;
+    cursor: help;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: $font-weight--normal;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 4rem;
+    left: 0.625rem;
+    transform: translateX(-50%);
+    font-size: 0.6875rem;
+    font-weight: $font-weight--normal;
+    width: 24rem;
+    color: $color-white;
+    background: $color-blue--quite-dark;
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 0.25rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in, bottom 0.3s ease;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      bottom: -0.8rem;
+      left: 50%;
+      margin-left: -0.8rem;
+      width: 0;
+      border-top: 0.8rem solid $color-blue--quite-dark;
+      border-right: 0.8rem solid transparent;
+      border-left: 0.8rem solid transparent;
+      font-size: 0;
+      line-height: 0;
+    }
+
+    &--is-visible {
+      visibility: visible;
+      opacity: 1;
+      bottom: 0rem;
+    }
+
+    &--compact {
+      width: 16rem;
+    }
+  }
+
+  &__icon + &__content {
+    left: 1.125rem;
+  }
+
+  &__icon + .HelpTip__content--is-visible {
+    bottom: 2rem;
+  }
+}

@@ -1,0 +1,193 @@
+@import '../../css/shared/variables';
+
+.Button {
+  display: inline-block;
+  font-weight: $font-weight--bold;
+  padding: 0.75rem 4rem;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  transition: padding 0.3s ease-in-out;
+
+  &,
+  &:link,
+  &:visited {
+    color: #fff;
+    text-decoration: none;
+    background: $color-green;
+    border: 1px solid $color-green;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: $color-green--light;
+    border: 1px solid $color-green;
+    outline: none;
+  }
+
+  &:disabled {
+    background: $color-green--light;
+    border: 1px solid $color-green--light;
+  }
+
+  &:active {
+    color: #fff;
+    background: $color-green--light;
+    border: 1px solid $color-green--light;
+    outline: none;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--small {
+    padding: 0.2rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 0.2rem;
+    font-weight: $font-weight--bold;
+    text-transform: uppercase;
+  }
+
+  &--tiny {
+    font-size: 0.6875rem;
+    padding: 0.2rem 1rem;
+  }
+
+  &--micro {
+    font-size: 0.6875rem;
+    padding: 0.1rem 0.6rem;
+    text-transform: uppercase;
+  }
+
+  &--danger {
+    &,
+    &:link,
+    &:visited {
+      background: $color-red;
+      border: 1px solid $color-red;
+    }
+
+    &:focus,
+    &:hover {
+      background: $color-red--dark;
+      border: 1px solid $color-red;
+    }
+
+    &:active {
+      background: $color-red--dark;
+      border: 1px solid $color-red--dark;
+    }
+  }
+
+  &--neutral {
+    color: $color-blue--ultra-dark;
+    background: $color-blue--dark;
+    border-color: $color-blue--dark;
+
+    &:hover {
+      color: $color-blue--ultra-dark;
+      background: $color-blue--dark;
+      border-color: $color-blue;
+    }
+    &:active {
+      color: $color-blue--ultra-dark;
+      border-color: $color-blue--dark;
+      background: $color-blue--dark;
+    }
+  }
+
+  &--hollow {
+    background: $button-choice-background-color;
+    font-weight: $font-weight--bold;
+
+    &.Button--buy {
+      color: $color-green;
+      border-color: $color-green;
+
+      &:hover {
+        background-color: $color-green--very-dark;
+      }
+      &:active {
+        background-color: $color-green--very-dark;
+        border-color: $color-green--very-dark;
+      }
+    }
+
+    &.Button--sell {
+      color: $color-red--pale;
+      border-color: $color-red--pale;
+
+      &:hover {
+        background-color: $color-red--very-dark;
+      }
+      &:active {
+        border-color: $color-red--very-dark;
+        background-color: $color-red--very-dark;
+      }
+    }
+
+    &.Button--convert {
+      color: $color-yellow;
+      border-color: $color-yellow;
+
+      &:hover {
+        background-color: $color-yellow--very-dark;
+      }
+      &:active {
+        background-color: $color-yellow--very-dark;
+        border-color: $color-yellow--very-dark;
+      }
+    }
+
+    &.Button--neutral {
+      color: $color-blue--dark-faint;
+      border-color: $color-blue--dark-faint;
+
+      &:hover {
+        background-color: $color-blue--active;
+      }
+      &:active {
+        background-color: $color-blue--active;
+        border-color: $color-blue--active;
+      }
+    }
+  }
+
+  &--loading {
+    cursor: progress;
+  }
+
+  &--outlined {
+    padding: 0.2rem 0.75rem;
+    font-size: 0.75rem;
+    color: $color-blue--action;
+    font-weight: $font-weight--bold;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid $color-blue--action;
+    border-radius: 4px;
+
+    &:hover {
+      border: 1px solid $color-blue--action;
+      background: $color-blue--active;
+      color: $color-blue--action;
+    }
+
+    &:active {
+      border-color: $color-blue--active;
+      color: $color-blue--action;
+    }
+  }
+
+  &__spinner {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.35rem;
+  }
+}

@@ -1,0 +1,41 @@
+@import '~css/shared/variables';
+
+.TradeButton {
+  position: relative;
+  display: inline-block;
+
+  &__list {
+    position: absolute;
+    top: 0rem;
+    z-index: 5;
+    list-style: none;
+    left: 0;
+    background: $color-blue--dark-faint;
+    padding: 0;
+    right: 0;
+    border-radius: 2px;
+    overflow: hidden;
+
+    &-item {
+      height: 25px;
+      padding-top: 0.33rem;
+      text-align: center;
+      border-bottom: 1px solid $color-blue--very-dark;
+      cursor: pointer;
+
+      &:hover {
+        background: $color-blue--very-dark;
+        a {
+          color: $color-blue--dark-faint !important;
+        }
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+      a {
+        color: $color-blue--very-dark !important;
+        text-decoration: none !important;
+      }
+    }
+  }
+}

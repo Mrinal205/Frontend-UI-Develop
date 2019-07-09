@@ -1,0 +1,51 @@
+@import '~css/shared/variables';
+
+.ButtonChoice {
+  display: flex;
+
+  &__button {
+    flex: 1;
+    margin: 0 0.6rem;
+    padding: 0.55rem;
+    background: $button-choice-background-color;
+    border: 1px solid $button-choice-border-color;
+    color: $button-choice-label-color;
+    font-weight: $font-weight--bold;
+    border-radius: 0.125rem;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.ButtonChoice--buy {
+  .ButtonChoice__button--selected {
+    color: $color-green;
+    border-color: $color-green;
+  }
+}
+
+.ButtonChoice--sell {
+  .ButtonChoice__button--selected {
+    color: $color-red--pale;
+    border-color: $color-red--pale;
+  }
+}
+
+.ButtonChoice--convert {
+  .ButtonChoice__button--selected {
+    color: $color-yellow;
+    border-color: $color-yellow;
+  }
+}

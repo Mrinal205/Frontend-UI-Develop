@@ -1,0 +1,7 @@
+.note {
+  font-size: 12px;
+  text-align: left;
+  &--success {
+    color: $color-green;
+  }
+}

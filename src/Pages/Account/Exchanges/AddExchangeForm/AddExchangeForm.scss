@@ -1,0 +1,18 @@
+@import '~css/shared/variables';
+
+.AddExchangeForm {
+  &__headline {
+    font-size: 1.125rem;
+    font-weight: $font-weight--bold;
+  }
+
+  &__select {
+    padding: 0.5rem 0 0rem;
+  }
+
+  &__country-hint {
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    color: $color-blue--dark;
+  }
+}

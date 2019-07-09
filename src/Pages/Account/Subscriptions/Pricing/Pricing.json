@@ -1,0 +1,70 @@
+{
+  "features": {
+    "premiumFolioMember": {
+      "checked": false,
+      "text": "Premium portfolio monitor"
+    },
+    "2FA": {
+      "checked": false,
+      "text": "Two-factor authentication (2FA)"
+    },
+    "priorityTechSupport": {
+      "checked": true,
+      "text": "Priority Tech Support",
+      "modifier": "thin"
+    },
+    "5ExchangeConnections": {
+      "checked": true,
+      "text": "5 exchange connections"
+    },
+    "premiumEmailSupport": {
+      "checked": true,
+      "text": "Premium Email Support"
+    },
+    "convertCoin": {
+      "checked": true,
+      "text": "Convert coin feature",
+      "modifier": "thin"
+    },
+    "buySellTradingFeatures": {
+      "checked": false,
+      "text": "Buy / Sell trading features"
+    },
+    "premiumChatSupport": {
+      "checked": true,
+      "text": "Premium Chat Support"
+    },
+    "profitTrailing": {
+      "checked": true,
+      "text": "Profit trailing feature",
+      "modifier": "thin"
+    },
+    "stoplossProfitSellCombo": {
+      "checked": false,
+      "text": "Stoploss & Profit sell combo"
+    },
+    "newFeatureDiscount": {
+      "checked": true,
+      "text": "Exclusive discount on new features"
+    },
+    "affiliateEarn": {
+      "checked": true,
+      "text": "Affiliate earn feature",
+      "modifier": "thin"
+    }
+  },
+  "prices": [
+    {
+      "months": 1,
+      "price": 18
+    },
+    {
+      "months": 6,
+      "price": 15
+    },
+    {
+      "months": 12,
+      "price": 12
+    }
+  ]
+}

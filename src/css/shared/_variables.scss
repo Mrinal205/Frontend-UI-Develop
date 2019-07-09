@@ -1,0 +1,95 @@
+$color-white: #fff;
+
+$color-green: #08b689;
+$color-green--light: #078a68;
+$color-green--dark: #078a68;
+$color-green--muted: #0d5054;
+$color-green--very-dark: #11444d;
+
+$color-blue: #008ed4;
+$color-blue-disabled: #0f1f35;
+$color-blue--text: #132a4a;
+$color-blue--dark: #355b82;
+$color-blue--dark-faint: #3d6496;
+$color-blue--slate: #243c5e;
+$color-blue--quite-dark: #1d395d; // dont we have too many shades?
+$color-blue--ultra-dark: #11253f;
+$color-blue--very-dark: #101e32;
+$color-blue--muted: #162f4c;
+$color-blue--active: #172d4b;
+$color-blue--highlight: #87b5f3;
+
+$color-blue--action: #4a90e2;
+$color-blue--50: #233b5a;
+$color-blue--90: #152a46;
+$color-blue--100: #0f2037;
+$color-blue--footer-legend: #25639f;
+
+$color-blue--form-border: #0081ff;
+$color-blue--form-bg: #1a3455;
+$color-blue--form-bg-focus: #132a4a;
+
+$color-light-green: #08b689;
+$color-dark-gray: #1a304d;
+$color-darkest-gray: $color-blue--ultra-dark;
+
+$color-red: #d3005b;
+$color-red--hover: #b53424;
+$color-red--pale: #e05140;
+$color-red--dark: #b2004c;
+$color-red--muted: #613649;
+$color-red--very-dark: #3e2e3f;
+
+$button-choice-background-color: #0e1e34;
+$button-choice-label-color: #233b5a;
+$button-choice-border-color: #233b5a;
+
+$color-yellow: #f5a623;
+$color-yellow--dark: #e58623;
+$color-yellow--very-dark: #474437;
+
+$background-color--canvas-public: #12233a;
+$background-color--canvas: #0f1e33;
+
+$background--main: #182e4b;
+$background--box: #162c48;
+
+$separator-color: $color-blue--90;
+
+$text-color--main: $color-white;
+$text-color--subtle: $color-blue--dark;
+$text-color--success: $color-green;
+$text-color--error: $color-red;
+$text-color--special: $color-blue;
+
+// Fonts
+$font-family--regular: 'Roboto', sans-serif;
+
+$font-weight--normal: 400;
+$font-weight--bold: 500;
+$font-weight--extra-bold: 700;
+
+// Links colors
+$link-primary: $color-green;
+$link-primary--hover: $color-white;
+$link-secondary: $color-white;
+$link-secondary--hover: $color-green;
+
+// Animations
+$animation-duration: 1s;
+
+// Z-index map:
+
+$z-index--modal-content: 10001;
+$z-index--modal-overlay: 10000;
+$z-index--account-nav-menu: 1000;
+$z-index--exchange-menu: 200;
+$z-index--select-menu: 100;
+
+// Breakpoints
+$breakpoint-xs: 320px;
+$breakpoint-sm: 510px;
+$breakpoint-md: 750px;
+$breakpoint-lg: 990px;
+$breakpoint-xl: 1230px;
+$breakpoint-xxl: 1470px;

@@ -1,0 +1,42 @@
+@import '~css/shared/variables';
+
+.TopMarkets {
+  flex-grow: 1;
+  width: 34%;
+  background: $color-blue--ultra-dark;
+  margin: 0 10px 20px 10px;
+  padding: 1.5rem 0 2.7rem;
+  position: relative;
+
+  &__placeholder {
+    flex-grow: 1;
+    margin: 10px;
+    width: 34%;
+  }
+
+  &__Header {
+    font-weight: $font-weight--bold;
+
+    &-title {
+      font-size: 1.125rem;
+      margin: 0 1.5rem 1rem;
+    }
+  }
+
+  &__Footer {
+    font-size: 0.6875rem;
+    color: $color-blue--dark-faint;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    left: 1.5rem;
+
+    & .Pagination {
+      float: right;
+    }
+  }
+
+  & .TableList .change-price {
+    padding: 3px 0;
+  }
+}

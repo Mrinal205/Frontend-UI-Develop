@@ -1,0 +1,35 @@
+.animated {
+  animation-duration: $animation-duration;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(-10px);
+  }
+  20% {
+    transform: translateX(6px);
+  }
+  30% {
+    transform: translateX(-6px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(0px);
+  }
+}
+
+.shake {
+  animation-name: shake;
+}

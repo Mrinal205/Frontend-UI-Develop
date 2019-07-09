@@ -1,0 +1,66 @@
+@import '~css/shared/variables';
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+
+  &__bar {
+    animation: Spinner__spin 1.2s linear infinite;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    width: 20%;
+    height: 7.8%;
+    top: 40%;
+    left: 40%;
+  }
+
+  @for $i from 0 through 12 {
+    &__bar--b#{$i} {
+      animation-delay: #{($i - 12) / 10}s;
+      transform: rotate(#{($i * 30)}deg) translate(146%);
+    }
+  }
+
+  &--is-big {
+    width: 80px;
+    height: 80px;
+  }
+
+  &--is-small {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--color-blue {
+    .Spinner__bar {
+      background-color: $color-blue;
+    }
+  }
+
+  &--color-red {
+    .Spinner__bar {
+      background-color: $color-red;
+    }
+  }
+}
+
+@keyframes Spinner__spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}

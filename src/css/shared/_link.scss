@@ -1,0 +1,27 @@
+@import 'variables';
+
+a,
+.link--primary {
+  &:link,
+  &:visited {
+    color: $link-primary;
+    text-decoration: underline;
+  }
+  &:hover,
+  &:active {
+    color: $link-primary--hover;
+  }
+}
+
+.link--secondary {
+  &:link,
+  &:visited {
+    color: $link-secondary;
+    text-decoration: none;
+  }
+  &:hover,
+  &:active {
+    color: $link-secondary--hover;
+    text-decoration: underline;
+  }
+}

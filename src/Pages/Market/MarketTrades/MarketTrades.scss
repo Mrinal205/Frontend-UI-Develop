@@ -1,0 +1,15 @@
+@import '~css/shared/variables';
+
+.MarketTrades {
+  .ReactTable {
+    .rt-tbody {
+      .tl-side-sell {
+        color: $color-red--pale;
+      }
+
+      .tl-side-buy {
+        color: $color-green;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import '~css/shared/variables';
+
+.Exchanges {
+  &__list {
+    margin: 0 0 2rem 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid $color-dark-gray;
+  }
+
+  &__item {
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-dark-gray;
+  }
+
+  &__add {
+    font-size: 0.875rem;
+    display: inline-block;
+    padding: 1rem 1rem 1rem 0rem;
+
+    &::before {
+      content: '';
+      background: url('../../../../assets/icons/plus-sign.svg') 50% 50% no-repeat;
+      display: inline-block;
+      background-color: $color-blue--form-bg;
+      border: solid 1px $color-blue--form-border;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 2px;
+      margin: 0 1rem 0 0;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+    }
+
+    &,
+    &:link,
+    &:visited {
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-light-green;
+      &::before {
+        background-color: $color-blue--form-bg-focus;
+      }
+    }
+  }
+}
+
+.Exchange {
+  position: relative;
+
+  &__name {
+    font-size: 1rem;
+    font-weight: $font-weight--bold;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    vertical-align: top;
+    background-color: $color-green;
+    mask-image: url('../../../../assets/icons/icon-exchange.svg');
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+  }
+
+  &__actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

@@ -1,0 +1,26 @@
+@import '~css/shared/variables';
+
+.LoginHistory {
+  .table {
+    thead {
+      th {
+        font-size: 0.75rem;
+      }
+
+      .table__col--date {
+        width: 12rem;
+      }
+
+      .table__col--ip {
+        width: 12rem;
+      }
+    }
+
+    tbody {
+      td {
+        font-size: 0.75rem;
+        font-weight: $font-weight--bold;
+      }
+    }
+  }
+}

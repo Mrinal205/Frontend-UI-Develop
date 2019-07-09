@@ -1,0 +1,14 @@
+.OpenOrders {
+  &__Status-field {
+    &--close-button {
+      margin-left: 0.5rem;
+      cursor: pointer;
+      filter: saturate(5) hue-rotate(175deg);
+    }
+
+    .Spinner {
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+}

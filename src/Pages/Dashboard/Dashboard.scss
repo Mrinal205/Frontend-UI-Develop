@@ -1,0 +1,79 @@
+@import '~css/shared/variables';
+
+.Dashboard {
+  &__Holdings {
+    &--stacked {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .GridBox.GridBox--Holdings {
+        width: 100%;
+        min-height: 342px;
+      }
+    }
+    .TableList .ReactTable {
+      .rt-thead.-header {
+        padding: 0;
+      }
+
+      .rt-table.rt-overflow {
+        overflow: visible;
+      }
+
+      .rt-tbody.rt-overflow {
+        overflow: visible;
+      }
+
+      .rt-td.rt-overflow {
+        overflow: visible;
+      }
+    }
+  }
+
+  &__Chart {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--wrapper {
+      width: 500px;
+      height: 300px;
+
+      @media (min-width: $breakpoint-xl) {
+        height: 400px;
+      }
+
+      @media (min-width: $breakpoint-xxl) {
+        height: 450px;
+      }
+    }
+
+    .chartjs-render-monitor {
+      align-self: center;
+    }
+
+    .Chart__Loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: $color-blue--dark-faint;
+
+      &-text {
+        text-align: center;
+        display: block;
+        font-size: 0.875rem;
+        padding: 0 0 0.5rem 0;
+      }
+    }
+  }
+}
+
+.Holdings__Footer {
+  margin-top: 1rem;
+}

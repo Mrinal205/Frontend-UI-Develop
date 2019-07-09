@@ -1,0 +1,29 @@
+.Side-column {
+  min-width: 312px;
+  max-width: 312px;
+  flex-basis: unset;
+  .TableList--clickable .rt-overflow .rt-tr-group {
+    padding: 0;
+  }
+  .rt-thead.-header {
+    padding: 0 !important;
+  }
+  .GridBox {
+    padding: 0.75rem;
+    &__title {
+      padding: 0 0 0.5rem 0;
+      font-size: 1.125rem;
+    }
+    &--transparent {
+      padding: 0;
+    }
+    &--Exchange {
+      padding: 1rem 0.75rem;
+    }
+    &--Exchange {
+      .GridBox__title {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+}

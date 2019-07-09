@@ -1,0 +1,43 @@
+@import '~css/shared/variables';
+
+.Profile {
+  display: flex;
+
+  &__avatar {
+    width: 68px;
+    height: 68px;
+    background: url('./avatar.svg') 50% 50% no-repeat;
+    background-size: 90%;
+    margin: 0rem 1rem 0 0;
+  }
+
+  &__name {
+    font-size: 1.125rem;
+    font-weight: $font-weight--bold;
+    margin: 0.5rem 0 0rem 0;
+  }
+
+  &__details {
+    min-width: 30rem;
+    font-weight: $font-weight--bold;
+    line-height: 1.5rem;
+
+    dt {
+      font-size: 0.75rem;
+      color: $text-color--subtle;
+      float: left;
+      clear: left;
+      margin: 0;
+      padding: 0 0.5rem 0 0;
+    }
+
+    dd {
+      font-size: 0.75rem;
+      margin: 0;
+    }
+  }
+
+  &__label {
+    margin-left: 0.5rem;
+  }
+}

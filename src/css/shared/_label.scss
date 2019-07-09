@@ -1,0 +1,16 @@
+.label {
+  background-color: $color-green;
+  color: $color-blue--ultra-dark;
+  font-size: 0.6875rem;
+  padding: 0.1875rem 1rem;
+  line-height: 1;
+  border-radius: 3px;
+  display: inline-block;
+  font-weight: $font-weight--bold;
+
+  &--is-disabled {
+    color: $color-blue--slate;
+    border-color: $color-blue--ultra-dark;
+    background: $color-blue--ultra-dark;
+  }
+}

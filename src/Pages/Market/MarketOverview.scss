@@ -1,0 +1,32 @@
+@import '~css/shared/variables';
+
+.MarketOverview {
+  &__Header {
+    font-weight: $font-weight--bold;
+
+    &-title {
+      font-size: 1.125rem;
+    }
+    &-value {
+      font-size: 1.875rem;
+    }
+    &-secondary-title {
+      color: $color-blue--dark-faint;
+      font-size: 0.875rem;
+      padding-top: 1.125rem;
+    }
+    &-secondary-value {
+      font-size: 1.25rem;
+    }
+  }
+
+  .MarketsList {
+    min-height: 440px;
+  }
+}
+
+.TopMarkets__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}

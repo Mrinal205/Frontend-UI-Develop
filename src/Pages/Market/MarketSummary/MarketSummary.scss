@@ -1,0 +1,131 @@
+@import '~css/shared/variables';
+
+.MarketSummary {
+  position: relative;
+  font-weight: $font-weight--bold;
+  padding: 0;
+
+  display: flex;
+
+  &__main,
+  &__stats {
+    flex: 1;
+  }
+
+  &__trading-pair {
+    font-size: 1.125rem;
+  }
+
+  &__price-value {
+    line-height: 1;
+    font-size: 1.625rem;
+  }
+
+  &__price-change {
+    margin-left: 0.5rem;
+
+    &::before {
+      content: '▲';
+      display: inline-block;
+      margin: 0 0.25rem 0 0;
+      opacity: 0;
+      // transition: transform 0.3s ease-in-out;
+    }
+
+    &.change-up {
+      color: $color-green;
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &.change-down {
+      color: $color-red--pale;
+
+      &::before {
+        opacity: 1;
+        transform: rotate(-180deg);
+        transform-origin: center;
+      }
+    }
+  }
+
+  &__price-usd {
+    display: block;
+    margin: 0;
+    font-size: 0.625rem;
+    color: $color-blue--dark-faint;
+  }
+
+  // Trades
+  &__trades {
+    position: absolute;
+    right: 0rem;
+    bottom: 1rem;
+    margin: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  &__trade {
+    padding: 0 0 0 2rem;
+    font-size: 0.75rem;
+    min-width: 10rem;
+    text-align: right;
+  }
+
+  &__trade-label {
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  &__trade-value {
+    &::before {
+      content: '▲';
+      display: inline-block;
+      margin: 0 0.25rem 0 0;
+      opacity: 0;
+      // transition: transform 0.3s ease-in-out;
+    }
+
+    &.change-up {
+      color: $color-green;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &.change-down {
+      color: $color-red--pale;
+
+      &::before {
+        opacity: 1;
+        transform: rotate(-180deg);
+        transform-origin: center;
+      }
+    }
+  }
+
+  &__trade-value-usd {
+    display: block;
+    margin: 0;
+    font-size: 0.625rem;
+    color: $color-blue--dark-faint;
+  }
+
+  // Volume
+  &__volume {
+    text-align: right;
+    font-size: 0.875rem;
+    font-weight: $font-weight--bold;
+    color: $color-blue--dark-faint;
+    margin: 0 0 0.375rem 0;
+  }
+
+  &__volume-value {
+    color: $color-white;
+    padding: 0 0 0 0.5rem;
+    font-weight: $font-weight--bold;
+  }
+}

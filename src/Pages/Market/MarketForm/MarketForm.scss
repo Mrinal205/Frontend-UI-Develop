@@ -1,0 +1,263 @@
+@import '~css/shared/variables';
+
+.MarketForms {
+  position: relative;
+
+  .GridBox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.MarketForm {
+  margin-top: 1rem;
+  padding: 1rem 0 0rem 0;
+  position: relative;
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+
+  &--sell {
+    padding-left: 1rem;
+  }
+
+  &--buy {
+    padding-right: 1rem;
+    border-right: 1px solid $color-dark-gray;
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1rem;
+    margin: 0 0 0rem 0;
+    padding: 0 0 0.5rem 0;
+    text-transform: capitalize;
+  }
+
+  &__info {
+    position: absolute;
+    right: 0;
+    top: 0.2rem;
+    font-size: 0.75rem;
+    font-weight: $font-weight--bold;
+    color: $color-blue--slate;
+
+    &--clickable {
+      cursor: pointer;
+    }
+  }
+
+  &__error-message {
+    position: absolute;
+    font-size: 0.65rem;
+    top: 195px;
+  }
+
+  &__info-value {
+    color: $color-blue--dark-faint;
+  }
+
+  &__row {
+    padding: 0.4rem 0;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &--sub-row {
+      margin: 0rem 0 0.5rem 0;
+      padding: 0 0 0 0rem;
+    }
+    &--with-hint {
+      flex-direction: column;
+
+      .MarketForm__field {
+        width: 100%;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    color: $color-white;
+    font-weight: $font-weight--bold;
+    flex: 0 1 4rem;
+    text-transform: capitalize;
+  }
+
+  &__data {
+    flex: 1;
+    font-size: 0.875rem;
+    font-weight: $font-weight--bold;
+    &-value {
+      color: $color-blue--dark-faint;
+    }
+  }
+
+  &__field {
+    flex: 1;
+    position: relative;
+
+    &--hint {
+      font-size: 0.6875rem;
+      color: $button-choice-label-color;
+      font-weight: $font-weight--bold;
+      width: 100%;
+    }
+
+    + .MarketForm__field {
+      margin-left: 1rem;
+    }
+  }
+
+  &__input-placeholder {
+    color: $color-blue--slate;
+    display: inline-block;
+    width: 5.5rem;
+    font-size: 0.75rem;
+  }
+
+  input {
+    font-size: 0.75rem;
+  }
+
+  &__input {
+    background: $color-blue--ultra-dark;
+    border: 1px solid $color-blue--slate;
+    padding: 0.4rem 3rem 0.4rem 0.625rem;
+    font-size: 0.75rem;
+    width: 100%;
+    color: $color-blue--dark-faint;
+    border-radius: 0.125rem;
+    -moz-appearance: textfield;
+  }
+
+  &__field-unit {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    pointer-events: none;
+    color: $color-blue--slate;
+    font-weight: $font-weight--bold;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.3;
+  }
+
+  &__total-label {
+    font-size: 1rem;
+    color: $color-white;
+    font-weight: $font-weight--bold;
+    flex: 1;
+  }
+
+  &__total-value {
+    font-size: 1rem;
+    color: $color-white;
+    font-weight: $font-weight--bold;
+    flex: 2;
+    text-align: right;
+  }
+
+  &__fee {
+    padding: 0rem 0 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6875rem;
+    color: $button-choice-label-color;
+    font-weight: $font-weight--bold;
+  }
+
+  &__pull-bottom {
+    flex: 1 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  &__actions {
+    padding: 1rem 0;
+  }
+
+  &__submit {
+    text-transform: capitalize;
+    padding: 0.625rem 4rem;
+  }
+
+  &__submit--convert {
+    background-color: $color-yellow;
+    border-color: $color-yellow;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background: $color-yellow--dark;
+      border-color: $color-yellow--dark;
+    }
+
+    &:active {
+      background: $color-yellow--dark;
+      border-color: $color-yellow--dark;
+    }
+  }
+
+  &__submit--sell {
+    background-color: $color-red--pale;
+    border-color: $color-red--pale;
+
+    &:focus,
+    &:hover {
+      background-color: $color-red--hover;
+      border-color: $color-red--pale;
+    }
+
+    &:active {
+      background: $color-red--hover;
+      border-color: $color-red--hover;
+    }
+  }
+
+  &__close-button {
+    color: $color-blue--dark-faint;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    font-weight: $font-weight--bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+
+  .AdvancedMarketForm__Sell {
+    &:before {
+      content: '';
+      border-top: 1px solid $color-dark-gray;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+    .ButtonChoice {
+      padding: 0;
+    }
+  }
+
+  .Select {
+    &-control {
+      font-size: 0.875rem;
+      padding: 0.4rem 0;
+      .Select-value,
+      .Select-placeholder {
+        top: 5px;
+        color: $color-blue--dark-faint;
+      }
+    }
+  }
+}

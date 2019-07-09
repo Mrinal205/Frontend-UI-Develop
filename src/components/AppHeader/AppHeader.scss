@@ -1,0 +1,100 @@
+@import '~css/shared/variables';
+
+.AppHeader {
+  height: 75px;
+  background: $color-blue--muted;
+  border-bottom: 1px solid $color-blue--ultra-dark;
+  display: flex;
+  position: relative;
+
+  &__logoContainer {
+    display: flex;
+  }
+
+  &__logo {
+    width: 75px;
+    border-right: 1px solid $color-blue--ultra-dark;
+    background: url(../../assets/logo--small.svg) 50% 50% no-repeat;
+  }
+
+  &__alphaLogo {
+    position: absolute;
+    bottom: 7px;
+    width: 75px;
+    height: 12px;
+    background: url(../../assets/icons/alpha-new-new.svg) 50% 50% no-repeat;
+    background-size: 65%;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-link {
+    padding: 1.6rem 2rem 0 2rem;
+    border-right: 1px solid $color-blue--ultra-dark;
+
+    &,
+    &:link,
+    &:visited {
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-green;
+    }
+
+    &--is-active {
+      &,
+      &:link,
+      &:visited {
+        background: #13243c;
+        color: $color-green;
+      }
+    }
+  }
+
+  &__nav-link-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    top: -0.1rem;
+    background-color: $color-white;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+
+    &--dashboard {
+      mask-image: url('../../assets/icons/dashboard.svg');
+    }
+
+    &--market {
+      mask-image: url('../../assets/icons/market.svg');
+    }
+
+    &--wallet {
+      mask-image: url('../../assets/icons/wallet.svg');
+    }
+  }
+
+  &__nav-link {
+    &--is-active,
+    &:hover,
+    &:active {
+      .AppHeader__nav-link-icon {
+        background: $color-green;
+      }
+    }
+  }
+
+  &__account {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-left: 1px solid $color-blue--ultra-dark;
+  }
+}

@@ -1,0 +1,138 @@
+@import '~css/shared/variables';
+
+.AccountNav {
+  &__profile {
+    display: flex;
+    padding: 1rem 1.5rem;
+    height: 75px;
+  }
+
+  &__avatar {
+    width: 3rem;
+    height: 3rem;
+    background: url('../../../assets/avatar.svg') 50% 50% no-repeat;
+    background-size: 80%;
+    margin: 0rem 0rem 0 0;
+  }
+
+  &__greet {
+    padding: 0.75rem 0.5rem;
+  }
+
+  &__name {
+    color: $color-white;
+  }
+
+  &__subscription {
+    font-size: 0.75rem;
+    font-weight: $font-weight--bold;
+    display: block;
+
+    &,
+    &:link,
+    &:visited {
+      color: $color-blue;
+    }
+  }
+
+  &__menu {
+    background: $color-green;
+    padding: 0rem 0;
+    border-radius: 0.25rem;
+    position: absolute;
+    display: none;
+    left: 1rem;
+    top: 4.7rem;
+    width: 10rem;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: -0.8rem;
+      left: 2rem;
+      margin-left: -0.8rem;
+      width: 0;
+      border-bottom: 0.8rem solid $color-green;
+      border-right: 0.8rem solid transparent;
+      border-left: 0.8rem solid transparent;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    &,
+    &:link,
+    &:visited {
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $color-green--dark;
+    }
+
+    &:first-child {
+      border-radius: 0.25rem 0.25rem 0 0;
+      &:hover {
+        // need to insert tip in first item again
+        // to display it colored when 1st item is hovered
+        &::after {
+          content: ' ';
+          position: absolute;
+          top: -0.8rem;
+          left: 2rem;
+          margin-left: -0.8rem;
+          width: 0;
+          border-bottom: 0.8rem solid $color-green--dark;
+          border-right: 0.8rem solid transparent;
+          border-left: 0.8rem solid transparent;
+          font-size: 0;
+          line-height: 0;
+          z-index: 11;
+        }
+      }
+    }
+
+    &:last-child {
+      border: none;
+      border-radius: 0 0 0.25rem 0.25rem;
+    }
+  }
+
+  &__link-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    top: -0.1rem;
+    background-color: $color-white;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+
+    &--support {
+      mask-image: url('../../../assets/icons/support.svg');
+    }
+
+    &--account {
+      mask-image: url('../../../assets/icons/account.svg');
+    }
+
+    &--logout {
+      mask-image: url('../../../assets/icons/logout.svg');
+    }
+  }
+
+  &:hover {
+    .AccountNav__menu {
+      display: block;
+      z-index: $z-index--account-nav-menu;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import '~css/shared/variables';
+
+.Subscription {
+  &__container {
+    .header__type--success {
+      color: $color-green;
+    }
+  }
+}
